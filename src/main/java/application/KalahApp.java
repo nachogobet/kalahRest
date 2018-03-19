@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
 @SpringBootApplication
 @Configuration
 @EnableAutoConfiguration
-@ComponentScan("controllers")
+@ComponentScan("controllers, services")
 public class KalahApp {
     public static void main(String[] args){
         SpringApplication.run(KalahApp.class, args);
