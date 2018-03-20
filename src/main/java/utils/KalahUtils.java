@@ -49,7 +49,7 @@ public class KalahUtils {
         if(winner == 0)
             objectNode.putPOJO("Next turn", "Player " + turn);
         else{
-            objectNode.putPOJO("Winner", "Player " + turn);
+            objectNode.putPOJO("Winner", "Player " + winner);
         }
 
 
