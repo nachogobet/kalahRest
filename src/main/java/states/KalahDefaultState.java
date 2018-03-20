@@ -53,6 +53,11 @@ public class KalahDefaultState implements KalahState {
         if(swellIndex != 7 && swellIndex != 14)
             this.gameService.switchTurn();
 
+        if(KalahUtils.isGameFinished(this.gameService.board, playerId)){
+            this.gameService.setState(this.gameService.getFinishedGameState());
+            return this.gameService.computeMove(playerId, swellNumber);
+        }
+
         return KalahUtils.printResult(this.gameService.board, this.gameService.turn, 0);
     }
 
